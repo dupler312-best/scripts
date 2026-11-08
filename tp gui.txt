@@ -1,0 +1,1043 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local StandsGUI = Instance.new("ScreenGui")
+local Container = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Top = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local Background = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local Scrolling = Instance.new("ScrollingFrame")
+local Items = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local Trigger = Instance.new("TextButton")
+local UIListLayout = Instance.new("UIListLayout")
+local UIPadding = Instance.new("UIPadding")
+local Tier4 = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local Trigger_2 = Instance.new("TextButton")
+local Crates = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local Trigger_3 = Instance.new("TextButton")
+local Health = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local TextLabel_4 = Instance.new("TextLabel")
+local Trigger_4 = Instance.new("TextButton")
+local Protection = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local TextLabel_5 = Instance.new("TextLabel")
+local Trigger_5 = Instance.new("TextButton")
+local Enemy = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local TextLabel_6 = Instance.new("TextLabel")
+local Trigger_6 = Instance.new("TextButton")
+local Players = Instance.new("Frame")
+local UICorner_10 = Instance.new("UICorner")
+local TextLabel_7 = Instance.new("TextLabel")
+local Trigger_7 = Instance.new("TextButton")
+local TopX = Instance.new("TextLabel")
+local UICorner_11 = Instance.new("UICorner")
+local ItemsTable = Instance.new("ScrollingFrame")
+local Example = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local TextLabel_8 = Instance.new("TextLabel")
+local Trigger_8 = Instance.new("TextButton")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local UIPadding_2 = Instance.new("UIPadding")
+local Filter = Instance.new("TextBox")
+local UICorner_13 = Instance.new("UICorner")
+local Artifacts = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local TextLabel_9 = Instance.new("TextLabel")
+local Trigger_9 = Instance.new("TextButton")
+local Sword = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
+local TextLabel_10 = Instance.new("TextLabel")
+local Trigger_10 = Instance.new("TextButton")
+
+--Properties:
+
+StandsGUI.Parent = game.CoreGui
+StandsGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Container.Name = "Container"
+Container.Parent = StandsGUI
+Container.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Container.BackgroundTransparency = 0.150
+Container.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Container.BorderSizePixel = 0
+Container.Position = UDim2.new(0.348050028, 0, 0.20198676, 0)
+Container.Size = UDim2.new(0, 412, 0, 380)
+
+UICorner.CornerRadius = UDim.new(0, 5)
+UICorner.Parent = Container
+
+Top.Name = "Top"
+Top.Parent = Container
+Top.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Top.BackgroundTransparency = 1.000
+Top.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Top.BorderSizePixel = 0
+Top.Position = UDim2.new(0.0461165048, 0, 0.0315789469, 0)
+Top.Size = UDim2.new(0, 94, 0, 33)
+Top.Font = Enum.Font.Jura
+Top.Text = "Items GUI"
+Top.TextColor3 = Color3.fromRGB(255, 255, 255)
+Top.TextSize = 28.000
+
+UICorner_2.CornerRadius = UDim.new(0, 5)
+UICorner_2.Parent = Top
+
+Background.Name = "Background"
+Background.Parent = Container
+Background.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Background.BorderSizePixel = 0
+Background.Position = UDim2.new(0.0266990289, 0, 0.136842102, 0)
+Background.Size = UDim2.new(0, 110, 0, 316)
+
+UICorner_3.CornerRadius = UDim.new(0, 5)
+UICorner_3.Parent = Background
+
+Scrolling.Name = "Scrolling"
+Scrolling.Parent = Background
+Scrolling.Active = true
+Scrolling.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Scrolling.BackgroundTransparency = 1.000
+Scrolling.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Scrolling.BorderSizePixel = 0
+Scrolling.Size = UDim2.new(0, 110, 0, 316)
+Scrolling.CanvasSize = UDim2.new(0, 0, 0, 0)
+
+Items.Name = "Items"
+Items.Parent = Scrolling
+Items.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Items.BackgroundTransparency = 0.300
+Items.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Items.BorderSizePixel = 0
+Items.Position = UDim2.new(-0.00495049497, 0, 0, 0)
+Items.Size = UDim2.new(0, 99, 0, 41)
+
+UICorner_4.CornerRadius = UDim.new(0, 5)
+UICorner_4.Parent = Items
+
+TextLabel.Parent = Items
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 99, 0, 41)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "All Items"
+TextLabel.TextColor3 = Color3.fromRGB(71, 71, 71)
+TextLabel.TextSize = 18.000
+
+Trigger.Name = "Trigger"
+Trigger.Parent = Items
+Trigger.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger.BackgroundTransparency = 1.000
+Trigger.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger.BorderSizePixel = 0
+Trigger.Size = UDim2.new(0, 99, 0, 41)
+Trigger.Font = Enum.Font.SourceSans
+Trigger.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger.TextSize = 14.000
+Trigger.TextTransparency = 1.000
+
+UIListLayout.Parent = Scrolling
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 4)
+
+UIPadding.Parent = Scrolling
+UIPadding.PaddingTop = UDim.new(0, 5)
+
+Tier4.Name = "Tier 4"
+Tier4.Parent = Scrolling
+Tier4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tier4.BackgroundTransparency = 0.300
+Tier4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tier4.BorderSizePixel = 0
+Tier4.Position = UDim2.new(-0.00495049497, 0, 0, 0)
+Tier4.Size = UDim2.new(0, 99, 0, 41)
+
+UICorner_5.CornerRadius = UDim.new(0, 5)
+UICorner_5.Parent = Tier4
+
+TextLabel_2.Parent = Tier4
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Size = UDim2.new(0, 99, 0, 41)
+TextLabel_2.Font = Enum.Font.Unknown
+TextLabel_2.Text = "Tier 4"
+TextLabel_2.TextColor3 = Color3.fromRGB(71, 71, 71)
+TextLabel_2.TextSize = 18.000
+
+Trigger_2.Name = "Trigger"
+Trigger_2.Parent = Tier4
+Trigger_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_2.BackgroundTransparency = 1.000
+Trigger_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_2.BorderSizePixel = 0
+Trigger_2.Size = UDim2.new(0, 99, 0, 41)
+Trigger_2.Font = Enum.Font.SourceSans
+Trigger_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_2.TextSize = 14.000
+Trigger_2.TextTransparency = 1.000
+
+Crates.Name = "Crates"
+Crates.Parent = Scrolling
+Crates.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Crates.BackgroundTransparency = 0.300
+Crates.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Crates.BorderSizePixel = 0
+Crates.Position = UDim2.new(-0.00495049497, 0, 0, 0)
+Crates.Size = UDim2.new(0, 99, 0, 41)
+
+UICorner_6.CornerRadius = UDim.new(0, 5)
+UICorner_6.Parent = Crates
+
+TextLabel_3.Parent = Crates
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Size = UDim2.new(0, 99, 0, 41)
+TextLabel_3.Font = Enum.Font.Unknown
+TextLabel_3.Text = "Crates"
+TextLabel_3.TextColor3 = Color3.fromRGB(71, 71, 71)
+TextLabel_3.TextSize = 18.000
+
+Trigger_3.Name = "Trigger"
+Trigger_3.Parent = Crates
+Trigger_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_3.BackgroundTransparency = 1.000
+Trigger_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_3.BorderSizePixel = 0
+Trigger_3.Size = UDim2.new(0, 99, 0, 41)
+Trigger_3.Font = Enum.Font.SourceSans
+Trigger_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_3.TextSize = 14.000
+Trigger_3.TextTransparency = 1.000
+
+Health.Name = "Health"
+Health.Parent = Scrolling
+Health.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Health.BackgroundTransparency = 0.300
+Health.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Health.BorderSizePixel = 0
+Health.Position = UDim2.new(-0.00495049497, 0, 0, 0)
+Health.Size = UDim2.new(0, 99, 0, 41)
+
+UICorner_7.CornerRadius = UDim.new(0, 5)
+UICorner_7.Parent = Health
+
+TextLabel_4.Parent = Health
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Size = UDim2.new(0, 99, 0, 41)
+TextLabel_4.Font = Enum.Font.Unknown
+TextLabel_4.Text = "Health"
+TextLabel_4.TextColor3 = Color3.fromRGB(71, 71, 71)
+TextLabel_4.TextSize = 18.000
+
+Trigger_4.Name = "Trigger"
+Trigger_4.Parent = Health
+Trigger_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_4.BackgroundTransparency = 1.000
+Trigger_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_4.BorderSizePixel = 0
+Trigger_4.Size = UDim2.new(0, 99, 0, 41)
+Trigger_4.Font = Enum.Font.SourceSans
+Trigger_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_4.TextSize = 14.000
+Trigger_4.TextTransparency = 1.000
+
+Protection.Name = "Protection"
+Protection.Parent = Scrolling
+Protection.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Protection.BackgroundTransparency = 0.300
+Protection.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Protection.BorderSizePixel = 0
+Protection.Position = UDim2.new(-0.00495049497, 0, 0, 0)
+Protection.Size = UDim2.new(0, 99, 0, 41)
+
+UICorner_8.CornerRadius = UDim.new(0, 5)
+UICorner_8.Parent = Protection
+
+TextLabel_5.Parent = Protection
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Size = UDim2.new(0, 99, 0, 41)
+TextLabel_5.Font = Enum.Font.Unknown
+TextLabel_5.Text = "Protection"
+TextLabel_5.TextColor3 = Color3.fromRGB(71, 71, 71)
+TextLabel_5.TextSize = 18.000
+
+Trigger_5.Name = "Trigger"
+Trigger_5.Parent = Protection
+Trigger_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_5.BackgroundTransparency = 1.000
+Trigger_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_5.BorderSizePixel = 0
+Trigger_5.Size = UDim2.new(0, 99, 0, 41)
+Trigger_5.Font = Enum.Font.SourceSans
+Trigger_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_5.TextSize = 14.000
+Trigger_5.TextTransparency = 1.000
+
+Enemy.Name = "Enemy"
+Enemy.Parent = Scrolling
+Enemy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Enemy.BackgroundTransparency = 0.300
+Enemy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Enemy.BorderSizePixel = 0
+Enemy.Position = UDim2.new(-0.00495049497, 0, 0, 0)
+Enemy.Size = UDim2.new(0, 99, 0, 41)
+
+UICorner_9.CornerRadius = UDim.new(0, 5)
+UICorner_9.Parent = Enemy
+
+TextLabel_6.Parent = Enemy
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Size = UDim2.new(0, 99, 0, 41)
+TextLabel_6.Font = Enum.Font.Unknown
+TextLabel_6.Text = "Enemy"
+TextLabel_6.TextColor3 = Color3.fromRGB(71, 71, 71)
+TextLabel_6.TextSize = 18.000
+
+Trigger_6.Name = "Trigger"
+Trigger_6.Parent = Enemy
+Trigger_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_6.BackgroundTransparency = 1.000
+Trigger_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_6.BorderSizePixel = 0
+Trigger_6.Size = UDim2.new(0, 99, 0, 41)
+Trigger_6.Font = Enum.Font.SourceSans
+Trigger_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_6.TextSize = 14.000
+Trigger_6.TextTransparency = 1.000
+
+Players.Name = "Players"
+Players.Parent = Scrolling
+Players.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Players.BackgroundTransparency = 0.300
+Players.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Players.BorderSizePixel = 0
+Players.Position = UDim2.new(-0.00495049497, 0, 0, 0)
+Players.Size = UDim2.new(0, 99, 0, 41)
+
+UICorner_10.CornerRadius = UDim.new(0, 5)
+UICorner_10.Parent = Players
+
+TextLabel_7.Parent = Players
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Size = UDim2.new(0, 99, 0, 41)
+TextLabel_7.Font = Enum.Font.Unknown
+TextLabel_7.Text = "Players"
+TextLabel_7.TextColor3 = Color3.fromRGB(71, 71, 71)
+TextLabel_7.TextSize = 18.000
+
+Trigger_7.Name = "Trigger"
+Trigger_7.Parent = Players
+Trigger_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_7.BackgroundTransparency = 1.000
+Trigger_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_7.BorderSizePixel = 0
+Trigger_7.Size = UDim2.new(0, 99, 0, 41)
+Trigger_7.Font = Enum.Font.SourceSans
+Trigger_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_7.TextSize = 14.000
+Trigger_7.TextTransparency = 1.000
+
+Artifacts.Name = "Artifacts"
+Artifacts.Parent = Scrolling
+Artifacts.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Artifacts.BackgroundTransparency = 0.300
+Artifacts.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Artifacts.BorderSizePixel = 0
+Artifacts.Position = UDim2.new(-0.00495049497, 0, 0, 0)
+Artifacts.Size = UDim2.new(0, 99, 0, 41)
+
+UICorner_14.CornerRadius = UDim.new(0, 5)
+UICorner_14.Parent = Artifacts
+
+TextLabel_9.Parent = Artifacts
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_9.BorderSizePixel = 0
+TextLabel_9.Size = UDim2.new(0, 99, 0, 41)
+TextLabel_9.Font = Enum.Font.Unknown
+TextLabel_9.Text = "Artifacts"
+TextLabel_9.TextColor3 = Color3.fromRGB(71, 71, 71)
+TextLabel_9.TextSize = 18.000
+
+Trigger_9.Name = "Trigger"
+Trigger_9.Parent = Artifacts
+Trigger_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_9.BackgroundTransparency = 1.000
+Trigger_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_9.BorderSizePixel = 0
+Trigger_9.Size = UDim2.new(0, 99, 0, 41)
+Trigger_9.Font = Enum.Font.SourceSans
+Trigger_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_9.TextSize = 14.000
+Trigger_9.TextTransparency = 1.000
+
+Sword.Name = "Sword"
+Sword.Parent = Scrolling
+Sword.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sword.BackgroundTransparency = 0.300
+Sword.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sword.BorderSizePixel = 0
+Sword.Position = UDim2.new(-0.00495049497, 0, 0, 0)
+Sword.Size = UDim2.new(0, 99, 0, 41)
+
+UICorner_15.CornerRadius = UDim.new(0, 5)
+UICorner_15.Parent = Sword
+
+TextLabel_10.Parent = Sword
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_10.BorderSizePixel = 0
+TextLabel_10.Size = UDim2.new(0, 99, 0, 41)
+TextLabel_10.Font = Enum.Font.Unknown
+TextLabel_10.Text = "Steel Sword"
+TextLabel_10.TextColor3 = Color3.fromRGB(71, 71, 71)
+TextLabel_10.TextSize = 18.000
+
+Trigger_10.Name = "Trigger"
+Trigger_10.Parent = Sword
+Trigger_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_10.BackgroundTransparency = 1.000
+Trigger_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_10.BorderSizePixel = 0
+Trigger_10.Size = UDim2.new(0, 99, 0, 41)
+Trigger_10.Font = Enum.Font.SourceSans
+Trigger_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_10.TextSize = 14.000
+Trigger_10.TextTransparency = 1.000
+
+TopX.Name = "TopX"
+TopX.Parent = Container
+TopX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TopX.BackgroundTransparency = 1.000
+TopX.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TopX.BorderSizePixel = 0
+TopX.Position = UDim2.new(0.337378651, 0, 0.0315789469, 0)
+TopX.Size = UDim2.new(0, 253, 0, 33)
+TopX.Font = Enum.Font.Jura
+TopX.Text = "SpineWare: All Items"
+TopX.TextColor3 = Color3.fromRGB(255, 255, 255)
+TopX.TextSize = 28.000
+
+UICorner_11.CornerRadius = UDim.new(0, 5)
+UICorner_11.Parent = TopX
+
+ItemsTable.Name = "ItemsTable"
+ItemsTable.Parent = Container
+ItemsTable.Active = true
+ItemsTable.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ItemsTable.BackgroundTransparency = 1.000
+ItemsTable.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ItemsTable.BorderSizePixel = 0
+ItemsTable.Position = UDim2.new(0.337378651, 0, 0.257894725, 0)
+ItemsTable.Size = UDim2.new(0, 261, 0, 270)
+ItemsTable.CanvasSize = UDim2.new(0, 0, 1000, 0)
+
+Example.Name = "Example"
+Example.Parent = ItemsTable
+Example.BackgroundColor3 = Color3.fromRGB(171, 171, 171)
+Example.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Example.BorderSizePixel = 0
+Example.Position = UDim2.new(-0.139846742, 0, 0, 0)
+Example.Size = UDim2.new(0, 217, 0, 36)
+Example.Visible = false
+
+UICorner_12.CornerRadius = UDim.new(0, 4)
+UICorner_12.Parent = Example
+
+TextLabel_8.Parent = Example
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Size = UDim2.new(0, 217, 0, 36)
+TextLabel_8.Font = Enum.Font.Unknown
+TextLabel_8.Text = "Gatling Gun: [#455] [+]"
+TextLabel_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.TextSize = 14.000
+
+Trigger_8.Name = "Trigger"
+Trigger_8.Parent = Example
+Trigger_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_8.BackgroundTransparency = 1.000
+Trigger_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_8.BorderSizePixel = 0
+Trigger_8.Size = UDim2.new(0, 217, 0, 36)
+Trigger_8.Font = Enum.Font.SourceSans
+Trigger_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_8.TextSize = 14.000
+Trigger_8.TextTransparency = 1.000
+
+UIListLayout_2.Parent = ItemsTable
+UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 4)
+
+UIPadding_2.Parent = ItemsTable
+UIPadding_2.PaddingTop = UDim.new(0, 5)
+
+Filter.Name = "Filter"
+Filter.Parent = Container
+Filter.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+Filter.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Filter.BorderSizePixel = 0
+Filter.Position = UDim2.new(0.381067961, 0, 0.136842102, 0)
+Filter.Size = UDim2.new(0, 224, 0, 35)
+Filter.Font = Enum.Font.Unknown
+Filter.Text = "Filter Items"
+Filter.TextColor3 = Color3.fromRGB(255, 255, 255)
+Filter.TextSize = 17.000
+
+UICorner_13.CornerRadius = UDim.new(0, 4)
+UICorner_13.Parent = Filter
+
+-- Scripts:
+
+local function KQTG_fake_script() -- Background.Controlling 
+	local script = Instance.new('LocalScript', Background)
+
+	local tabs : Instances = script.Parent.Scrolling:GetChildren()
+	local items_folder = workspace.Map.Ignore.Tools
+	local obj : Instances = script.Parent.Parent:FindFirstChild("ItemsTable")
+	local bypass_item_id : string = "#*@72503913191116949753"
+	local searching_for_bypass : boolean = true
+	local connections = {}
+	
+	local filtering_items = {
+		"Gatling Gun", "Flamethrower", "Dart Gun", "Shield Pack", "Squid Scooter", "Grenade Launcher", "Heavy Rifle", "Quad Launcher"
+	}
+	
+	local waypoints = {
+		["Artifacts"] = {CFrame.new(-751, 123, -3183), "Artifact C"},
+		["Sword"] = {CFrame.new(583, 162, -2430), "Steel Sword"}
+	}
+	
+	xpcall(function()
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "Do it for full work",
+			Text = "Pickup any tool: script`ll be calibrated",
+			Duration = 5
+		})
+		local hook;
+		hook = hookfunction(getrawmetatable(game).__namecall,newcclosure(function(self,...)
+			if searching_for_bypass then 
+				local namecall_meth = getnamecallmethod()
+				
+				if (namecall_meth == "FireServer" or namecall_meth == "InvokeServer") and self.Name == "PickupTool" then
+					local gotten = {...}
+					local bypass_id = gotten[1]
+					
+					bypass_item_id = bypass_id
+					return hook(self,...)
+				end
+				return hook(self,...)
+			else
+				return hook(self,...)
+			end
+		end))
+	end,function()
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "Do it for full work",
+			Text = "It seems ur executor doesn`t support it: script`ll use his own method.",
+			Duration = 5
+		})
+	end)
+	
+	local destroy_animation = function(frame : Frame)
+		task.spawn(function()
+			local ts = game:GetService("TweenService")
+			ts:Create(frame:FindFirstChildOfClass("TextLabel"),TweenInfo.new(2.3),{TextColor3 = Color3.new(0.117647, 0.462745, 0.764706)}):Play()
+			local old_text = frame:FindFirstChildOfClass("TextLabel").Text
+			
+			for i = 5, 1, -1 do
+				frame:FindFirstChildOfClass("TextLabel").Text = old_text.." ["..i.."]"
+				task.wait(1)
+			end
+			frame:Destroy()
+		end)
+	end
+	
+	local teleport = function(type_of : string, model : Instance)
+		task.spawn(function()
+			if type_of == "Model" then
+				local model_pivot = model.Handle.CFrame or model.WorldPivot
+				local char = game.Players.LocalPlayer.Character
+				local back_C = char.HumanoidRootPart.CFrame
+				
+				for i__ = 1, 2 do
+					char.HumanoidRootPart.CFrame = model_pivot
+					local A_1 = bypass_item_id
+					local A_2 = model.Name
+					local Event = game:GetService("Workspace").Services.PickupTool
+					Event:InvokeServer(A_1, A_2)
+					wait(0.2)
+				end
+				for i = 1, 10 do 
+					char.HumanoidRootPart.CFrame = back_C
+					wait(.01)	
+				end
+			elseif type_of == "Waypoint" then
+				local char = game.Players.LocalPlayer.Character
+				local back_C = char.HumanoidRootPart.CFrame
+				
+				for i__ = 1, 2 do
+					char.HumanoidRootPart.CFrame = model
+					wait(0.05)
+				end
+				for i = 1, 10 do 
+					char.HumanoidRootPart.CFrame = back_C
+					wait(.01)	
+				end
+			elseif type_of == "Humanoid" then
+				local hum_pivot = model:FindFirstChild("HumanoidRootPart").CFrame or model.WorldPivot
+				local char = game.Players.LocalPlayer.Character
+				
+				for i = 1,2 do
+					char.HumanoidRootPart.CFrame = hum_pivot
+					wait(.05)
+				end
+			elseif type_of == "Crate" then
+				local hum_pivot = model.WorldPivot + Vector3.new(0,1.5,0)
+				local char = game.Players.LocalPlayer.Character
+	
+				for i = 1,3 do
+					char.HumanoidRootPart.CFrame = hum_pivot
+					wait(.05)
+				end
+			end
+		end)
+	end
+	
+	local fill_table = function(searching_for : string)
+		task.spawn(function()
+				if searching_for == "Items" then
+					for ___, item: Model in items_folder:GetChildren() do
+						local frame_example : Frame = obj:FindFirstChild("Example"):Clone()
+						local text_ = frame_example:FindFirstChildOfClass("TextLabel")
+						local button_ = frame_example:FindFirstChildOfClass("TextButton")
+						
+						frame_example.Parent = script.Parent.Parent.ItemsTable
+						frame_example.Visible = true
+						frame_example.Name = "Not_Example"
+						text_.Text = item.Name
+						
+						button_.MouseButton1Click:Connect(function()
+							teleport("Model",item)
+						end)
+						item.Destroying:Connect(function()
+							destroy_animation(frame_example)
+						end)
+					end
+					
+					local con = items_folder.ChildAdded:Connect(function(item)
+						local frame_example : Frame = obj:FindFirstChild("Example"):Clone()
+						local text_ = frame_example:FindFirstChildOfClass("TextLabel")
+						local button_ = frame_example:FindFirstChildOfClass("TextButton")
+	
+						frame_example.Name = "Not_Example"
+						text_.Text = item.Name
+						frame_example.Parent = script.Parent.Parent.ItemsTable
+						frame_example.Visible = true
+						
+						button_.MouseButton1Click:Connect(function()
+							teleport("Model",item)
+						end)
+						item.Destroying:Connect(function()
+							destroy_animation(frame_example)
+						end)
+					end)
+					table.insert(connections,con)
+				elseif searching_for == "Tier 4" then
+					for ___, item: Model in items_folder:GetChildren() do				
+						for ____, filter_name in filtering_items do 
+							if string.find(item.Name:lower(),filter_name:lower()) then 
+								local frame_example : Frame = obj:FindFirstChild("Example"):Clone()
+								local text_ = frame_example:FindFirstChildOfClass("TextLabel")
+								local button_ = frame_example:FindFirstChildOfClass("TextButton")
+	
+								frame_example.Name = "Not_Example"
+								text_.Text = item.Name
+								frame_example.Parent = script.Parent.Parent.ItemsTable
+								frame_example.Visible = true
+								
+								button_.MouseButton1Click:Connect(function()
+									teleport("Model",item)
+								end)
+								item.Destroying:Connect(function()
+									destroy_animation(frame_example)
+								end)
+							end
+						end
+					end
+					local con = items_folder.ChildAdded:Connect(function(item)
+						for ____, filter_name in filtering_items do 
+							if filter_name:lower() == item.Name:lower() then 
+								local frame_example : Frame = obj:FindFirstChild("Example"):Clone()
+								local text_ = frame_example:FindFirstChildOfClass("TextLabel")
+								local button_ = frame_example:FindFirstChildOfClass("TextButton")
+	
+								frame_example.Name = "Not_Example"
+								text_.Text = item.Name
+								frame_example.Parent = script.Parent.Parent.ItemsTable
+								frame_example.Visible = true
+								
+								button_.MouseButton1Click:Connect(function()
+									teleport("Model",item)
+								end)
+								item.Destroying:Connect(function()
+									destroy_animation(frame_example)
+								end)
+							end
+						end
+					end)
+					table.insert(connections,con)
+				elseif searching_for == "Crates" then
+					local crates_table = {}
+					
+					for ____, crate in game.Workspace:GetChildren() do
+						if crate.Name:lower() == "crate" then
+							table.insert(crates_table,{crate,crate:FindFirstChildOfClass("Folder"):WaitForChild("Item").Value})
+						end
+					end
+					
+					for ___, filtered_crate in crates_table do
+						local is_a_tier_4 : boolean = false
+						for ______, f : string in filtering_items do
+							if f:lower() == filtered_crate[2]:lower() then
+								is_a_tier_4 = true
+							end
+						end
+						
+						local frame_example : Frame = obj:FindFirstChild("Example"):Clone()
+						local text_ = frame_example:FindFirstChildOfClass("TextLabel")
+						local button_ = frame_example:FindFirstChildOfClass("TextButton")
+	
+						frame_example.Name = "Not_Example"
+						text_.Text = filtered_crate[2]
+						frame_example.Parent = script.Parent.Parent.ItemsTable
+						frame_example.Visible = true
+						
+						if is_a_tier_4 then
+							text_.TextColor3 = Color3.new(0,0.8,0)
+						end	
+						button_.MouseButton1Click:Connect(function()
+							teleport("Crate",filtered_crate[1])
+						end)
+						filtered_crate[1].Destroying:Connect(function()
+							destroy_animation(frame_example)
+						end)
+					end
+				elseif searching_for == "Players" then
+					for ___, player: Player in game.Players:GetPlayers() do
+						local frame_example : Frame = obj:FindFirstChild("Example"):Clone()
+						local text_ = frame_example:FindFirstChildOfClass("TextLabel")
+						local button_ = frame_example:FindFirstChildOfClass("TextButton")
+	
+						frame_example.Name = "Not_Example"
+						text_.Text = player.Name
+						frame_example.Parent = script.Parent.Parent.ItemsTable
+						frame_example.Visible = true
+						
+						button_.MouseButton1Click:Connect(function()
+							teleport("Humanoid",player.Character)
+						end)
+						player.Destroying:Connect(function()
+							destroy_animation(frame_example)
+						end)
+					end
+					local con = game.Players.PlayerAdded:Connect(function(player)
+						local frame_example : Frame = obj:FindFirstChild("Example"):Clone()
+						local text_ = frame_example:FindFirstChildOfClass("TextLabel")
+						local button_ = frame_example:FindFirstChildOfClass("TextButton")
+	
+						frame_example.Name = "Not_Example"
+						text_.Text = player.Name
+						frame_example.Parent = script.Parent.Parent.ItemsTable
+						frame_example.Visible = true
+						
+						button_.MouseButton1Click:Connect(function()
+							teleport("Humanoid",player.Character)
+						end)
+						player.Destroying:Connect(function()
+							destroy_animation(frame_example)
+						end)
+					end)
+					table.insert(connections,con)
+				elseif searching_for == "Health" then
+					local health = {"Spray","Medical"}
+					
+					for ___, item: Model in items_folder:GetChildren() do				
+						for ____, filter_name in health do 
+							if string.find(item.Name:lower(),filter_name:lower()) then 
+								local frame_example : Frame = obj:FindFirstChild("Example"):Clone()
+								local text_ = frame_example:FindFirstChildOfClass("TextLabel")
+								local button_ = frame_example:FindFirstChildOfClass("TextButton")
+	
+								frame_example.Name = "Not_Example"
+								text_.Text = item.Name
+								frame_example.Parent = script.Parent.Parent.ItemsTable
+								frame_example.Visible = true
+								
+								button_.MouseButton1Click:Connect(function()
+									teleport("Model",item)
+								end)
+								item.Destroying:Connect(function()
+									destroy_animation(frame_example)
+								end)
+							end
+						end
+					end
+					local con = items_folder.ChildAdded:Connect(function(item)
+						for ____, filter_name in health do 
+							if string.find(item.Name:lower(),filter_name:lower()) then 
+								local frame_example : Frame = obj:FindFirstChild("Example"):Clone()
+								local text_ = frame_example:FindFirstChildOfClass("TextLabel")
+								local button_ = frame_example:FindFirstChildOfClass("TextButton")
+	
+								frame_example.Name = "Not_Example"
+								text_.Text = item.Name
+								frame_example.Parent = script.Parent.Parent.ItemsTable
+								frame_example.Visible = true
+								
+								button_.MouseButton1Click:Connect(function()
+									teleport("Model",item)
+								end)
+								item.Destroying:Connect(function()
+									destroy_animation(frame_example)
+								end)
+							end
+						end
+					end)
+					table.insert(connections,con)
+				elseif searching_for == "Protection" then
+					local health = {"Shield","Vest","Pack"}
+					
+					for ___, item: Model in items_folder:GetChildren() do				
+						for ____, filter_name in health do 
+							if string.find(item.Name:lower(),filter_name:lower()) then 
+								local frame_example : Frame = obj:FindFirstChild("Example"):Clone()
+								local text_ = frame_example:FindFirstChildOfClass("TextLabel")
+								local button_ = frame_example:FindFirstChildOfClass("TextButton")
+	
+								frame_example.Name = "Not_Example"
+								text_.Text = item.Name
+								frame_example.Parent = script.Parent.Parent.ItemsTable
+								frame_example.Visible = true
+								
+								button_.MouseButton1Click:Connect(function()
+									teleport("Model",item)
+								end)
+								item.Destroying:Connect(function()
+									destroy_animation(frame_example)
+								end)
+							end
+						end
+					end
+					local con = items_folder.ChildAdded:Connect(function(item)
+						for ____, filter_name in health do 
+							if string.find(item.Name:lower(),filter_name:lower()) then 
+								local frame_example : Frame = obj:FindFirstChild("Example"):Clone()
+								local text_ = frame_example:FindFirstChildOfClass("TextLabel")
+								local button_ = frame_example:FindFirstChildOfClass("TextButton")
+	
+								frame_example.Name = "Not_Example"
+								text_.Text = item.Name
+								frame_example.Parent = script.Parent.Parent.ItemsTable
+								frame_example.Visible = true
+								
+								button_.MouseButton1Click:Connect(function()
+									teleport("Model",item)
+								end)
+								item.Destroying:Connect(function()
+									destroy_animation(frame_example)
+								end)
+							end
+						end
+					end)
+					table.insert(connections,con)
+				elseif searching_for == "Enemy" then
+					local enemy_folder : Instances = game.Workspace.AIHunter:GetChildren()
+					local filtered_enemy_table = {}
+					for _, enemy : Model in enemy_folder do
+						if enemy:IsA("Model") then
+							table.insert(filtered_enemy_table,enemy)
+						end
+					end
+					
+					for __, f_enemy : Model in filtered_enemy_table do
+						local frame_example : Frame = obj:FindFirstChild("Example"):Clone()
+						local text_ = frame_example:FindFirstChildOfClass("TextLabel")
+						local button_ = frame_example:FindFirstChildOfClass("TextButton")
+	
+						frame_example.Name = "Not_Example"
+						text_.Text = f_enemy.Name
+						frame_example.Parent = script.Parent.Parent.ItemsTable
+						frame_example.Visible = true
+						
+						button_.MouseButton1Click:Connect(function()
+							teleport("Humanoid",f_enemy)
+						end)
+						f_enemy.Destroying:Connect(function()
+							destroy_animation(frame_example)
+						end)
+					end
+				end
+			game:GetService("RunService").RenderStepped:Wait()
+		end)	
+	end
+	
+	for _, tab in tabs do
+		if tab:IsA("Frame") then
+			local trigger_button : TextButton = tab:FindFirstChildOfClass("TextButton")
+			local objects_to_search : string = tab.Name
+			trigger_button.MouseButton1Click:Connect(function()
+				local previous_objects : Instances = obj:GetChildren()
+				script.Parent.Parent.TopX.Text = string.format("SpineWare: %s",objects_to_search)
+				
+				for ____, connection : RBXScriptConnection in connections do
+					connection:Disconnect()
+				end
+				
+				task.spawn(function()
+					for __, to_delete : Frame in previous_objects do
+						if to_delete:IsA("Frame") and to_delete.Name ~= "Example" then
+							to_delete:Destroy()
+						end
+					end
+				end)
+				if waypoints[objects_to_search] then
+					game:GetService("RunService").RenderStepped:Wait()
+					local frame_example : Frame = obj:FindFirstChild("Example"):Clone()
+					local text_ = frame_example:FindFirstChildOfClass("TextLabel")
+					local button_ = frame_example:FindFirstChildOfClass("TextButton")
+					
+					frame_example.Name = "Not_Example"
+					text_.Text = waypoints[objects_to_search][2]
+					frame_example.Parent = script.Parent.Parent.ItemsTable
+					frame_example.Visible = true
+					
+					button_.MouseButton1Click:Connect(function()
+						teleport("Waypoint",waypoints[objects_to_search][1])
+					end)
+				else
+					fill_table(objects_to_search)
+				end
+			end)
+		end
+	end
+end
+coroutine.wrap(KQTG_fake_script)()
+local function KHZQJGZ_fake_script() -- Filter.When_Input 
+	local script = Instance.new('LocalScript', Filter)
+
+	local text_box : TextBox = script.Parent
+	
+	text_box.Changed:Connect(function()
+		local searching_box : Instances = text_box.Parent:FindFirstChild("ItemsTable"):GetChildren()
+		
+		for _, filter : Frame in searching_box do
+			if filter:IsA("Frame") then
+				local text_ = filter:FindFirstChildOfClass("TextLabel")
+				if text_.Parent.Name ~= "Example" then
+					if text_.Text ~= "" and text_.Text ~= "Filter Items" then
+						if string.find(text_.Text:lower(),text_box.Text:lower()) then
+							filter.Visible = true
+						else
+							filter.Visible = false
+						end
+					else
+						for __,v:Frame in searching_box do
+							if v:IsA("Frame") then
+								v.Visible = true
+							end
+						end
+					end
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(KHZQJGZ_fake_script)()
+local function ZTICVGG_fake_script() -- StandsGUI.Move 
+	local script = Instance.new('LocalScript', StandsGUI)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent:FindFirstChild("Container")
+	
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+	for _, element in script.Parent:GetDescendants() do
+		if element:IsA("TextLabel") or element:IsA("TextButton") or element:IsA("TextBox") then
+			if element.Name ~= "Top" then
+				local o = element.Text
+				element.Font = Enum.Font.Jura
+				element.RichText = true
+				element.Text = string.format("<b>%s</b>",o)
+			end
+		end
+	end
+end
+coroutine.wrap(ZTICVGG_fake_script)()
