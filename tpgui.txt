@@ -56,6 +56,7 @@ local Artifacts = Instance.new("Frame")
 local UICorner_14 = Instance.new("UICorner")
 local TextLabel_9 = Instance.new("TextLabel")
 local Trigger_9 = Instance.new("TextButton")
+local Divider = Instance.new("Frame")
 local Sword = Instance.new("Frame")
 local UICorner_15 = Instance.new("UICorner")
 local TextLabel_10 = Instance.new("TextLabel")
@@ -114,6 +115,9 @@ Scrolling.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Scrolling.BorderSizePixel = 0
 Scrolling.Size = UDim2.new(0, 110, 0, 316)
 Scrolling.CanvasSize = UDim2.new(0, 0, 0, 0)
+Scrolling.AutomaticCanvasSize = Enum.AutomaticSize.Y
+Scrolling.ScrollingDirection = Enum.ScrollingDirection.Y
+Scrolling.ScrollBarThickness = 2
 
 Items.Name = "Items"
 Items.Parent = Scrolling
@@ -154,6 +158,7 @@ UIListLayout.Parent = Scrolling
 UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout.Padding = UDim.new(0, 4)
+UIListLayout.FillDirection = Enum.FillDirection.Vertical
 
 UIPadding.Parent = Scrolling
 UIPadding.PaddingTop = UDim.new(0, 5)
@@ -368,6 +373,16 @@ Trigger_7.TextColor3 = Color3.fromRGB(0, 0, 0)
 Trigger_7.TextSize = 14.000
 Trigger_7.TextTransparency = 1.000
 
+Divider.Name = "Divider"
+Divider.Parent = Scrolling
+Divider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Divider.BackgroundTransparency = 0.700
+Divider.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Divider.BorderSizePixel = 0
+Divider.LayoutOrder = 7
+Divider.Size = UDim2.new(0, 99, 0, 2)
+
+Artifacts.LayoutOrder = 8
 Artifacts.Name = "Artifacts"
 Artifacts.Parent = Scrolling
 Artifacts.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -403,6 +418,7 @@ Trigger_9.TextColor3 = Color3.fromRGB(0, 0, 0)
 Trigger_9.TextSize = 14.000
 Trigger_9.TextTransparency = 1.000
 
+Sword.LayoutOrder = 9
 Sword.Name = "Sword"
 Sword.Parent = Scrolling
 Sword.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
